@@ -32,6 +32,9 @@ class midi2tdw():
         # stores each track and their corresponding channel: track (indexed 0) - channel (indexed 1)
         self.tuple_list = []
 
+        # necessary if the percussion screws everything up
+        self.disablepercussion = True
+
         # stores all tracks in a single timeline
         self.stitchedtrack = []
 
@@ -129,12 +132,12 @@ class midi2tdw():
 
 
 
-                '''
-                if (msg.type == "note_on" or msg.type == "note_off" or msg.type == "set_tempo"):
-                    if (msg.type != "set_tempo"):
-                        if(msg.channel + 1 == 10 or i == 13): # lets not work with channel 10 or 13 for now
-                            continue
-                '''
+                if (self.disablepercussion):
+                    if (msg.type == "note_on" or msg.type == "note_off" or msg.type == "set_tempo"):
+                        if (msg.type != "set_tempo"):
+                            if(msg.channel + 1 == 10): # lets not work with channel 10 
+                                continue
+                
 
                 # keep track of current time
                 elapsedtick += msg.time 
@@ -276,7 +279,5 @@ class midi2tdw():
         main.close()
 
 # debug
-# midi2tdw(f'in\\test7.mid')
-
-
+# midi2tdw(f'in\\test.mid')
 

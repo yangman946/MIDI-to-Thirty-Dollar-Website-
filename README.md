@@ -10,7 +10,7 @@ Converts MIDI files to TDW Files.
 * Clone This repo: `https://github.com/yangman946/MIDI-to-Thirty-Dollar-Website-.git`
 * Install requirements `pip install -r requirements.txt`
 * Add MIDI Files to [midi to 30 dollar website\in](https://github.com/yangman946/MIDI-to-Thirty-Dollar-Website-/tree/main/midi%20to%2030%20dollar%20website/in)
-* Run `main.py`
+* Run `run.bat`
 
 Output files will show up at [midi to 30 dollar website\out](https://github.com/yangman946/MIDI-to-Thirty-Dollar-Website-/tree/main/midi%20to%2030%20dollar%20website/out)
 

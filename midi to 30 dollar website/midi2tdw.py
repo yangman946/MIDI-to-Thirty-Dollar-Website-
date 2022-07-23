@@ -124,11 +124,11 @@ class midi2tdw():
                 '''
 
                 # Set the instrument for the given channel
-                if (msg.type == "program_change" and self.channels[msg.channel] == None):
+                if (msg.type == "program_change" and self.channels[msg.channel - 1] == None):
                     
-                    self.channels[msg.channel] = msg.program # sets each channels instrument 
+                    self.channels[msg.channel - 1] = msg.program # sets each channels instrument 
                     print('Track {}: {} - channel {} sound {}'.format(i, track.name, msg.channel + 1, self.channels[msg.channel]))
-                    self.tuple_list.append((i, msg.channel + 1)) # store the track and their respective channel
+                    self.tuple_list.append((i, msg.channel)) # store the track and their respective channel
 
 
 

@@ -16,7 +16,7 @@ Output files will show up at [midi to 30 dollar website\out](https://github.com/
 
 ## Running
 
-I highly recommend you download the [Thirty Dollar Website rewrite](https://greasyfork.org/en/scripts/439347-thirty-dollar-rewrite) for a smoother playback, especially when dealing with larger files. 
+~~I highly recommend you download the [Thirty Dollar Website rewrite](https://greasyfork.org/en/scripts/439347-thirty-dollar-rewrite) for a smoother playback, especially when dealing with larger files.~~ TDW has updated their audio system. 
 
 Some MIDI Files also use non-percussion notes on channel 10 - which is reserved for percussion. This screws up the conversion so it is best to just disable percussion in [midi2tdw.py](https://github.com/yangman946/MIDI-to-Thirty-Dollar-Website-/blob/main/midi%20to%2030%20dollar%20website/midi2tdw.py)
 
@@ -26,7 +26,7 @@ This project is a work in progress, If you wish to contribute, submit a pull req
 
 ## Limitations
 
-* 	~~Struggles with larger MIDI Files with more tracks and instruments~~ <-- Fixed by downloading the [Thirty Dollar Website rewrite](https://greasyfork.org/en/scripts/439347-thirty-dollar-rewrite)
+
 * Haven't fully tested percussion
 * Combining and timing bugs
 
